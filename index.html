@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authentication</title>
+   
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+      /* Base Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://th.bing.com/th/id/R.ed89db5b4b9c647c3ca59d8fb78861e1?rik=0hmfaxY8X0sdeA&pid=ImgRaw&r=0') no-repeat center center/cover; /* Random Unsplash image */
+}
+
+/* Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.2); /* Glass effect */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    backdrop-filter: blur(10px); /* Blur for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border */
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Heading Styling */
+h1 {
+    background: #000;
+    padding: 10px;
+    box-shadow: 8px 8px 8px;
+    border-radius: 8px;
+    text-shadow: 1px 1px 5px;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Button Group */
+.btn-group {
+    /* margin-top: 40px; */
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.image {
+    
+    width: 270px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px  silver;
+    margin: 0 auto; /* Centers the container in its parent */
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+}
+.image img{
+    border-radius: 10px;
+}
+.btn:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+#signInBtn {
+    background: linear-gradient(55deg, #000000, #ffffff); /* Black-to-white gradient */
+}
+
+#signInBtn:hover {
+    background: linear-gradient(45deg, #ffffff, #000000); /* Reverse the gradient on hover */
+}
+
+#signUpBtn {
+    background: linear-gradient(45deg, #000000, #ffffff); /* Black-to-white gradient */
+}
+
+#signUpBtn:hover {
+    background: linear-gradient(45deg, #ffffff, #000000); /* Reverse the gradient on hover */
+}
+#logoutbtn {
+    background: linear-gradient(45deg, #000000, #ffffff); /* Black-to-white gradient */
+}
+
+#logoutbtn:hover {
+    background: linear-gradient(45deg, #ffffff, #000000); /* Reverse the gradient on hover */
+}
+
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login Authentication</h1>
+    </br>
+        <div class="image">
+            <img src="https://img.freepik.com/premium-photo/portrait-successful-programmer-game-developer-coder-guy-uses-computer-laptop-work-game-design-hacker-boy-generative-ai-cyber-gamer_117038-7597.jpg?w=740" alt="" width="270px" height="200px">
+        </div></br>
+        <div class="btn-group">
+            <button id="signInBtn" class="btn">Sign In</button>
+            <button id="signUpBtn" class="btn">Sign Up</button>
+            <button id="logoutbtn" class="btn">Log Out</button>
+        </div>
+    </div>
+    <script>
+        // Navigation logic for buttons
+        document.getElementById("signInBtn").addEventListener("click", () => {
+            window.location.href = "./login.html"; // Navigate to login page
+        });
+
+        document.getElementById("signUpBtn").addEventListener("click", () => {
+            window.location.href = "./register.html"; // Navigate to register page
+        });
+    </script>
+    <script type="module" src="App.js"></script>
+</body>
+</html>
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <input type="email" id="signup-email" placeholder="Enter email" />
+    <input type="password" id="signup-password" placeholder="Enter password" />
+    <button id="signup-btn">Sign Up</button>
+    <p class="message" id="signup-message"></p>
+    <a href="login.html">Already have an account? Log In</a>
+  </div>
+  <script type="module">
+    import { signUp } from "./auth.js";
+
+    document.getElementById("signup-btn").addEventListener("click", () => {
+      const email = document.getElementById("signup-email").value;
+      const password = document.getElementById("signup-password").value;
+      signUp(email, password, (message, success) => {
+        const messageEl = document.getElementById("signup-message");
+        messageEl.textContent = message;
+        messageEl.style.color = success ? "green" : "red";
+      });
+    });
+  </script>
+</body>
+</html> -->

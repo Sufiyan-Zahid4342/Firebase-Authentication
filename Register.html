@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+<title>Register</title>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+    /* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://th.bing.com/th/id/R.ed89db5b4b9c647c3ca59d8fb78861e1?rik=0hmfaxY8X0sdeA&pid=ImgRaw&r=0') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Glassmorphism Container */
+  
+    
+form {
+    box-shadow:8px 8px 8px ;
+
+    width: 80%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.2); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+/* Heading */
+h1 {background: #000;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow:8px 8px 8px ;
+}
+
+/* Input Fields */
+form input {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.941);
+    border-radius: 8px;
+    background: rgba(248, 242, 242, 0.2);
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+/* Change placeholder text color */
+form input::placeholder {
+    color: rgba(255, 255, 255, 0.699); /* White with transparency */
+   ; /* Optional: adds a slight italic style */
+}
+
+
+form input:focus {
+    border-color: #c6d7c6;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Buttons */
+form button {
+    box-shadow:8px 8px 8px ;
+
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #09060a;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background: linear-gradient(55deg, #000000, #ffffff); /* Black-to-white gradient */
+}
+
+/* Google Button */
+form #signUp {
+    background-color: #6f08ff;
+}
+
+form #signUp:hover {
+    background-color: #c33b2e;
+}
+
+/* Links */
+form a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 10px;
+    background: #000;
+    box-shadow:8px 8px 8px ;
+
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+/* Paragraph */
+form p {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    form {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    form input {
+        font-size: 0.9rem;
+    }
+
+    form button {
+        font-size: 0.9rem;
+    }
+}
+
+</style>
+</head>
+<body>
+    
+    <form action="
+    " id="form">
+    <h1>USER REGISTERATION</h1>
+    <input type="email" name="" id="email" placeholder="Enter Your Email" required></br></br>
+    <input type="password" name="" id="password" placeholder="Enter Your password" required></br></br>
+    <button type="submit">Register User</button></br></br>
+
+    <a href="./login.html">Already User Account</a></form>
+    <p id="p"></p>
+    <script type="module" src="./Register.js"></script>
+</body>
+</html>

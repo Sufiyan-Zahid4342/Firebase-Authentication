@@ -1,0 +1,148 @@
+/* Base Styling */
+body {
+
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    /* Set image and positioning */
+        background-size: cover; /* Ensure the image covers the entire screen */
+        background-attachment: fixed; /* Makes the background stay fixed during scrolling */
+    
+    
+    background: url('https://th.bing.com/th/id/R.ed89db5b4b9c647c3ca59d8fb78861e1?rik=0hmfaxY8X0sdeA&pid=ImgRaw&r=0') no-repeat center center/cover; /* Background image */
+}
+
+/* Glassmorphism Container */
+.container {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.2); /* Glass effect */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    backdrop-filter: blur(10px); /* Glassmorphism blur */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.961); /* Border for glass effect */
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Fieldset Styling */
+form fieldset {
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 15px 20px;
+}
+
+form legend {
+    box-shadow: 2px 2px 2px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 0 10px;
+    background: rgb(0, 0, 0); /* Transparent background */
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid rgb(255, 255, 255); /* Transparent border */
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2); /* Glassmorphism input */
+    color: #fff;
+}
+.input-group input::placeholder{
+    color:#fff;
+}
+.input-group input:focus {
+    border-color: #000;
+    outline: none;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Buttons */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #000, #000);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg,#fff,#000,#fff);
+}
+
+.google-btn {
+    background: linear-gradient(45deg, #000, #000,#000);
+    box-shadow: 8px 8px 8px ;
+    margin-top: 10px;
+}
+
+.google-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg,#fff,#000,#fff);
+}
+
+/* Links Styling */
+a {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg,#fff,#000,#fff);
+    padding: 10px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+fieldset a {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: baseline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    form legend {
+        font-size: 1rem;
+    }
+
+    .input-group input {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+}
