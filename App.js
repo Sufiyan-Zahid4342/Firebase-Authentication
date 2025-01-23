@@ -8,7 +8,7 @@ onAuthStateChanged(auth, (user) => {
         console.log(`User is logged in with UID: ${uid}`);
     } else {
         // Redirect to login page if not authenticated
-        window.location = "login.html";
+        // window.location = "index.html";
     }
 });
 
@@ -37,9 +37,10 @@ logoutBtn.addEventListener("click", () => {
                         text: "You have been successfully logged out.",
                         icon: "success",
                         confirmButtonColor: "#3085d6",
-                    }).then(() => {
-                        window.location = "login.html";
                     });
+                    // .then(() => {
+                    //     window.location = "login.html";
+                    // });
                 })
                 .catch((error) => {
                     // Show error alert
