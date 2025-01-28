@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Login Form</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" data-aos="fade-down" data-aos-duration="2000">
         <form id="form">
             <fieldset>
-                <legend>Login</legend>
+                <legend  data-aos="flip-up" data-aos-duration="3000">Login</legend>
                 <div class="input-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" placeholder="Enter your email" required>
@@ -20,49 +22,21 @@
                     <label for="password">Password:</label>
                     <input type="password" id="password" placeholder="Enter your password" required>
                 </div>
-                <button type="submit" class="btn">Login</button></br>
-                <a href="./Register.html">Not a User</a></form>
+                <button type="submit" class="btn"  data-aos="fade-right" data-aos-duration="2000">Login</button></br>
+                <a href="./Register.html"  data-aos="fade-left" data-aos-duration="2000">Not a User</a></form>
             </fieldset>
         </form>
-        <button id="signUp" class="btn google-btn">Sign in with Google</button>
+        <button id="signUp" class="btn google-btn"  data-aos="flip-up" data-aos-duration="3000">Sign in with Google</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="login.js"></script>
+
+    <!-- aosAnimation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+      <!-- aosAnimation end -->
 </body>
 </html>
 
-
-<!-- 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Log In</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-    <h2>Log In</h2>
-    <input type="email" id="login-email" placeholder="Enter email" />
-    <input type="password" id="login-password" placeholder="Enter password" />
-    <button id="login-btn">Log In</button>
-    <p class="message" id="login-message"></p>
-    <a href="./index.html">Don't have an account? Sign Up</a>
-  </div>
-  <script type="module">
-    import { login } from "./auth.js";
-
-    document.getElementById("login-btn").addEventListener("click", () => {
-      const email = document.getElementById("login-email").value;
-      const password = document.getElementById("login-password").value;
-      login(email, password, (message, success) => {
-        const messageEl = document.getElementById("login-message");
-        messageEl.textContent = message;
-        messageEl.style.color = success ? "green" : "red";
-        if (success) window.location.href = "index.html"; // Redirect to home
-      });
-    });
-  </script>
-</body>
-</html> -->

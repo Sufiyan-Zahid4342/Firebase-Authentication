@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
 <title>Register</title>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <style>
     /* Base Styles */
@@ -37,6 +39,52 @@ form {
     border: 1px solid rgba(255, 255, 255, 0.3);
     text-align: center;
 }
+table{
+text-align: center;
+justify-content: center;
+align-items: center;
+margin-right: 40px;
+}
+  /* CSS for Typing Animation */
+  @keyframes typing {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 95%;
+      }
+    }
+    table {
+      width: 60%; /* Adjust table width */
+      border-collapse: collapse;
+    }
+    /* CSS for Text Container */
+    th 
+{
+text-align: center;
+font-weight: bolder;
+display: inline-block;
+font-size: 24px;
+white-space: nowrap;
+overflow: hidden; /* Hide the text initially */
+padding-left: 10px;
+animation: typing 4s steps(40) 1s forwards; /* Typing animation without the cursor */
+background: #000;
+padding: 10px;
+box-shadow: 8px 8px 8px;
+border-radius: 8px;
+text-shadow: 1px 1px 5px;
+font-size: 2rem;
+color: #fff;
+margin-bottom: 20px;
+    }
+
+    /* Blinking Cursor */
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
 
 /* Heading */
 h1 {background: #000;
@@ -151,13 +199,26 @@ form p {
     
     <form action="
     " id="form">
-    <h1>USER REGISTERATION</h1>
+    <table>
+        <thead>
+            <tr>
+              <!-- Typing animation applied to the table header -->
+              <th>LOGIN AUTHENTICATION</th>
+            </tr>
+          </thead>
+        </table>
     <input type="email" name="" id="email" placeholder="Enter Your Email" required></br></br>
     <input type="password" name="" id="password" placeholder="Enter Your password" required></br></br>
-    <button type="submit">Register User</button></br></br>
+    <button type="submit" data-aos="flip-up" data-aos-duration="3000">Register User</button></br></br>
 
-    <a href="./login.html">Already User Account</a></form>
+    <a href="./login.html" data-aos="flip-up" data-aos-duration="3000">Already User Account</a></form>
     <p id="p"></p>
     <script type="module" src="./Register.js"></script>
+    <!-- aosAnimation -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+<!-- aosAnimation end -->
 </body>
 </html>

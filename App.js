@@ -1,14 +1,13 @@
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 import { auth } from "./firebaseconfig.js";
 
-// Monitor authentication state
+
 onAuthStateChanged(auth, (user) => {
     if (user) {
         const uid = user.uid;
         console.log(`User is logged in with UID: ${uid}`);
     } else {
-        // Redirect to login page if not authenticated
-        // window.location = "index.html";
+      
     }
 });
 

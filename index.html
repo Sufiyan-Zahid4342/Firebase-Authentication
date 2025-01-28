@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Authentication</title>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/cssanimation.min.css" rel="stylesheet">
    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -14,6 +17,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -28,14 +32,61 @@ body {
     -webkit-backdrop-filter: blur(10px); /* Safari support */
     border: 1px solid rgba(255, 255, 255, 0.3); /* Border */
     border-radius: 12px;
-    padding: 30px 20px;
+    padding: 40px 30px;
     text-align: center;
     width: 90%;
     max-width: 400px;
+ 
 }
+table{
+text-align: center;
+justify-content: center;
+align-items: center;
+margin-right: 40px;
+}
+  /* CSS for Typing Animation */
+  @keyframes typing {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 95%;
+      }
+    }
+    table {
+      width: 60%; /* Adjust table width */
+      border-collapse: collapse;
+    }
+    /* CSS for Text Container */
+    th 
+{
+text-align: center;
+font-weight: bolder;
+display: inline-block;
+font-size: 24px;
+white-space: nowrap;
+overflow: hidden; /* Hide the text initially */
+padding-left: 10px;
+animation: typing 4s steps(40) 1s forwards; /* Typing animation without the cursor */
+background: #000;
+padding: 10px;
+box-shadow: 8px 8px 8px;
+border-radius: 8px;
+text-shadow: 1px 1px 5px;
+font-size: 2rem;
+color: #fff;
+margin-bottom: 20px;
+    }
+
+    /* Blinking Cursor */
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
 
 /* Heading Styling */
-h1 {
+/* th{
     background: #000;
     padding: 10px;
     box-shadow: 8px 8px 8px;
@@ -44,7 +95,7 @@ h1 {
     font-size: 2rem;
     color: #fff;
     margin-bottom: 20px;
-}
+} */
 
 /* Button Group */
 .btn-group {
@@ -65,17 +116,19 @@ h1 {
     transition: all 0.3s ease;
 }
 .image {
-    
+    margin-top: 100px;
     width: 270px;
     border-radius: 8px;
     box-shadow: 10px 10px 10px  silver;
-    margin: 0 auto; /* Centers the container in its parent */
+    margin: 0 auto;
     display: flex;
+    margin-top: 15px;
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers the content vertically */
 }
 .image img{
     border-radius: 10px;
+    /* margin-top: 15px; */
 }
 .btn:hover {
     transform: scale(1.05); /* Slight zoom on hover */
@@ -124,16 +177,23 @@ h1 {
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Login Authentication</h1>
+    <div class="container"  data-aos="fade-down" data-aos-duration="2000">
+        <table>
+        <thead>
+            <tr>
+              <!-- Typing animation applied to the table header -->
+              <th>LOGIN AUTHENTICATION</th>
+            </tr>
+          </thead>
+        </table>
     </br>
         <div class="image">
             <img src="https://img.freepik.com/premium-photo/portrait-successful-programmer-game-developer-coder-guy-uses-computer-laptop-work-game-design-hacker-boy-generative-ai-cyber-gamer_117038-7597.jpg?w=740" alt="" width="270px" height="200px">
         </div></br>
         <div class="btn-group">
-            <button id="signInBtn" class="btn">Sign In</button>
-            <button id="signUpBtn" class="btn">Sign Up</button>
-            <button id="logoutbtn" class="btn">Log Out</button>
+            <button  id="signInBtn" class="btn " data-aos="fade-right" data-aos-duration="2000">Sign In</button>
+            <button id="signUpBtn" class="btn"  data-aos="flip-up" data-aos-duration="3000">Sign Up</button>
+            <button id="logoutbtn" class="btn" data-aos="fade-left" data-aos-duration="2000">Log Out</button>
         </div>
     </div>
     <script>
@@ -147,40 +207,14 @@ h1 {
         });
     </script>
     <script type="module" src="App.js"></script>
+
+<!-- aosAnimation -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+<!-- aosAnimation end -->
+
 </body>
 </html>
 
-
-<!-- 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-    <h2>Sign Up</h2>
-    <input type="email" id="signup-email" placeholder="Enter email" />
-    <input type="password" id="signup-password" placeholder="Enter password" />
-    <button id="signup-btn">Sign Up</button>
-    <p class="message" id="signup-message"></p>
-    <a href="login.html">Already have an account? Log In</a>
-  </div>
-  <script type="module">
-    import { signUp } from "./auth.js";
-
-    document.getElementById("signup-btn").addEventListener("click", () => {
-      const email = document.getElementById("signup-email").value;
-      const password = document.getElementById("signup-password").value;
-      signUp(email, password, (message, success) => {
-        const messageEl = document.getElementById("signup-message");
-        messageEl.textContent = message;
-        messageEl.style.color = success ? "green" : "red";
-      });
-    });
-  </script>
-</body>
-</html> -->
